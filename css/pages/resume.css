@@ -1,0 +1,74 @@
+/* ==========================================================================
+   RESUME ANALYZER
+   ========================================================================== */
+
+.tool-header { margin-bottom: var(--sp-6); }
+.tool-header__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--signal-600);
+  display: block;
+  margin-bottom: var(--sp-2);
+}
+.tool-header p { max-width: 60ch; }
+
+.analyzer-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-6);
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .analyzer-layout { grid-template-columns: 1fr; }
+}
+
+.results-panel { min-height: 320px; }
+
+.breakdown-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+.breakdown-row:last-child { border-bottom: none; }
+.breakdown-row__label { flex: 0 0 160px; font-size: var(--fs-sm); font-weight: 600; }
+.breakdown-row__bar { flex: 1; }
+.breakdown-row__score { flex: 0 0 48px; text-align: right; font-family: var(--font-mono); font-size: var(--fs-sm); font-weight: 700; }
+
+.fix-list { display: flex; flex-direction: column; gap: var(--sp-3); }
+.fix-item {
+  display: flex;
+  gap: var(--sp-3);
+  padding: var(--sp-3);
+  border-radius: var(--radius-md);
+  background: var(--surface-sunken);
+  font-size: var(--fs-sm);
+}
+.fix-item__icon { flex-shrink: 0; width: 18px; height: 18px; margin-top: 2px; }
+.fix-item.severity-high .fix-item__icon { color: var(--status-bad); }
+.fix-item.severity-medium .fix-item__icon { color: var(--status-warn); }
+.fix-item.severity-low .fix-item__icon { color: var(--status-neutral); }
+
+.keyword-compare { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-5); }
+@media (max-width: 560px) { .keyword-compare { grid-template-columns: 1fr; } }
+.keyword-compare h5 { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-500); margin-bottom: var(--sp-3); }
+
+.score-summary { display: flex; align-items: center; gap: var(--sp-6); margin-bottom: var(--sp-6); }
+.score-summary__text h3 { margin-bottom: var(--sp-1); }
+.score-summary__text p { margin-bottom: 0; font-size: var(--fs-sm); }
+
+.jd-toggle {
+  font-size: var(--fs-sm);
+  color: var(--signal-600);
+  font-weight: 600;
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  margin-bottom: var(--sp-4);
+}

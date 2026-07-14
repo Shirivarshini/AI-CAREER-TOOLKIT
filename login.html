@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Log in — AI Career Toolkit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages/auth.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<main id="main" class="auth-shell">
+  <div class="auth-shell__form">
+    <div class="auth-card">
+      <a href="index.html" class="auth-card__brand">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="2" stroke="#3448FF" stroke-width="1.8"/><rect x="12" y="2" width="8" height="8" rx="2" stroke="#3448FF" stroke-width="1.8" opacity="0.55"/><rect x="2" y="12" width="8" height="8" rx="2" stroke="#3448FF" stroke-width="1.8" opacity="0.55"/><rect x="12" y="12" width="8" height="8" rx="2" stroke="#3448FF" stroke-width="1.8" opacity="0.3"/></svg>
+        Career Toolkit
+      </a>
+      <h1>Welcome back</h1>
+      <p class="auth-card__sub">Log in to see your saved analyses and score history.</p>
+
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label class="field__label" for="email">Email</label>
+          <input class="input" type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error" />
+          <p class="field__error" id="email-error" role="alert" hidden></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="password">Password</label>
+          <input class="input" type="password" id="password" name="password" autocomplete="current-password" required aria-describedby="password-error" />
+          <p class="field__error" id="password-error" role="alert" hidden></p>
+        </div>
+        <div class="flex justify-between items-center" style="margin-bottom: var(--sp-5);">
+          <label class="checkbox-row">
+            <input type="checkbox" id="remember" name="remember" />
+            Remember me
+          </label>
+          <a href="#" style="font-size: var(--fs-sm);">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="login-submit">Log in</button>
+      </form>
+
+      <div class="auth-divider">or</div>
+      <button type="button" class="btn btn-secondary btn-block" id="continue-as-guest">Continue as guest</button>
+      <div class="guest-note">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 5.3v3m0 2.2h.01M14 8A6 6 0 1 1 2 8a6 6 0 0 1 12 0Z" stroke="currentColor" stroke-width="1.4"/></svg>
+        Guest mode lets you use the core tools without an account; sign up later to save your history.
+      </div>
+
+      <p class="auth-card__footer">Don't have an account? <a href="signup.html">Sign up</a></p>
+    </div>
+  </div>
+
+  <aside class="auth-shell__aside" aria-hidden="true">
+    <h2>Track every score, every time you apply.</h2>
+    <p>Signed-in accounts save your resume, GitHub, and LinkedIn analyses so you can watch your scores improve over time.</p>
+    <div class="auth-shell__quote">"AVG. ATS SCORE IMPROVEMENT AFTER RE-UPLOAD" &mdash; tracked on your dashboard</div>
+  </aside>
+</main>
+
+<div id="toast-root"></div>
+
+<script src="js/config.js"></script>
+<script src="js/utils/dom.js"></script>
+<script src="js/utils/storage.js"></script>
+<script src="js/utils/theme.js"></script>
+<script src="js/utils/toast.js"></script>
+<script src="js/utils/api.js"></script>
+<script src="js/utils/validation.js"></script>
+<script src="js/pages/login.js"></script>
+</body>
+</html>

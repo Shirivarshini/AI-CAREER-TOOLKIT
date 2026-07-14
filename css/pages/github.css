@@ -1,0 +1,59 @@
+/* ==========================================================================
+   GITHUB ANALYSIS
+   ========================================================================== */
+
+.gh-search {
+  display: flex;
+  gap: var(--sp-3);
+  max-width: 560px;
+}
+.gh-search .field { flex: 1; margin-bottom: 0; }
+
+.gh-profile-card {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-5);
+}
+.gh-profile-card__avatar {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--surface-sunken);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.gh-profile-card__name { font-size: var(--fs-lg); margin-bottom: 2px; }
+.gh-profile-card__handle { color: var(--ink-500); font-family: var(--font-mono); font-size: var(--fs-sm); }
+
+.metric-tile {
+  padding: var(--sp-4);
+  text-align: left;
+}
+.metric-tile__value { font-family: var(--font-mono); font-size: var(--fs-xl); font-weight: 700; }
+.metric-tile__label { font-size: var(--fs-xs); color: var(--ink-500); text-transform: uppercase; letter-spacing: 0.05em; margin-top: var(--sp-1); }
+
+.lang-bar {
+  display: flex;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  margin-bottom: var(--sp-4);
+}
+.lang-bar__seg { height: 100%; }
+
+.lang-legend { display: flex; flex-wrap: wrap; gap: var(--sp-4); }
+.lang-legend__item { display: flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-xs); color: var(--ink-700); }
+.lang-legend__dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+.repo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+.repo-row:last-child { border-bottom: none; }
+.repo-row__name { font-weight: 600; font-size: var(--fs-sm); }
+.repo-row__desc { font-size: var(--fs-xs); color: var(--ink-500); margin-top: 2px; }
+.repo-row__stats { display: flex; gap: var(--sp-4); font-size: var(--fs-xs); color: var(--ink-500); font-family: var(--font-mono); flex-shrink: 0; }
