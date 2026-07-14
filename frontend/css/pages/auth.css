@@ -1,0 +1,93 @@
+/* ==========================================================================
+   AUTH PAGES — login / signup
+   ========================================================================== */
+
+.auth-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.auth-shell__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-6);
+}
+
+.auth-card { width: 100%; max-width: 400px; }
+
+.auth-card__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-bottom: var(--sp-7);
+}
+
+.auth-card h1 { font-size: var(--fs-2xl); margin-bottom: var(--sp-2); }
+.auth-card__sub { color: var(--ink-500); margin-bottom: var(--sp-6); }
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-block: var(--sp-5);
+  color: var(--ink-500);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.auth-divider::before, .auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.auth-card__footer {
+  text-align: center;
+  margin-top: var(--sp-6);
+  font-size: var(--fs-sm);
+  color: var(--ink-500);
+}
+
+.auth-shell__aside {
+  background: var(--ink-900);
+  color: var(--canvas);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--sp-9);
+  position: relative;
+  overflow: hidden;
+}
+.auth-shell__aside h2 { color: var(--canvas); font-size: var(--fs-xl); max-width: 20ch; }
+.auth-shell__aside p { color: #A6ACA8; max-width: 34ch; }
+
+.auth-shell__quote {
+  margin-top: var(--sp-8);
+  border-top: 1px solid #262B24;
+  padding-top: var(--sp-5);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: #8A9188;
+}
+
+@media (max-width: 900px) {
+  .auth-shell { grid-template-columns: 1fr; }
+  .auth-shell__aside { display: none; }
+}
+
+.guest-note {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-xs);
+  color: var(--ink-500);
+  background: var(--surface-sunken);
+  padding: var(--sp-3);
+  border-radius: var(--radius-md);
+  margin-top: var(--sp-5);
+}

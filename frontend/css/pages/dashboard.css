@@ -1,0 +1,60 @@
+/* ==========================================================================
+   DASHBOARD — history & score trend
+   ========================================================================== */
+
+.stat-card { padding: var(--sp-5); }
+.stat-card__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-500);
+  margin-bottom: var(--sp-2);
+}
+.stat-card__value {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+}
+.stat-card__delta { font-size: var(--fs-xs); margin-top: var(--sp-2); display: inline-flex; align-items: center; gap: 4px; }
+.stat-card__delta.up { color: var(--status-good); }
+.stat-card__delta.down { color: var(--status-bad); }
+
+.trend-card { padding: var(--sp-6); }
+.trend-card__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-5); }
+.trend-card canvas { max-height: 280px; }
+
+.history-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--sp-4);
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+.tool-icon-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.tool-icon-cell svg { width: 16px; height: 16px; color: var(--ink-500); }
+
+.quick-action {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+  text-decoration: none;
+}
+.quick-action:hover { text-decoration: none; }
+.quick-action__icon {
+  width: 38px; height: 38px;
+  border-radius: var(--radius-md);
+  background: var(--signal-100);
+  color: var(--signal-700);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.quick-action__title { font-weight: 600; font-size: var(--fs-sm); color: var(--ink-900); }
+.quick-action__sub { font-size: var(--fs-xs); color: var(--ink-500); }

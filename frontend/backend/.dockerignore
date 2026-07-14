@@ -1,0 +1,37 @@
+# --- Version control ---
+.git
+.gitignore
+
+# --- Environment / secrets: never bake these into an image ---
+.env
+.env.*
+!.env.example
+
+# --- Python artifacts ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+*.log
+
+# --- Virtual environments ---
+.venv/
+venv/
+
+# --- Tests (not needed at runtime; keeps the image lean) ---
+tests/
+
+# --- Local dev/data artifacts ---
+uploads/*
+!uploads/.gitkeep
+.DS_Store
+
+# --- Docker itself ---
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# --- Editor/IDE ---
+.vscode/
+.idea/

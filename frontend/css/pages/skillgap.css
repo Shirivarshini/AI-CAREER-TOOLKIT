@@ -1,0 +1,60 @@
+/* ==========================================================================
+   SKILL-GAP ANALYSIS
+   ========================================================================== */
+
+.skill-role-form { max-width: 480px; }
+
+.skill-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-5);
+}
+@media (max-width: 700px) { .skill-columns { grid-template-columns: 1fr; } }
+
+.skill-col__head {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-4);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+}
+.skill-col__count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-500);
+  background: var(--surface-sunken);
+  padding: 2px var(--sp-2);
+  border-radius: var(--radius-pill);
+}
+
+.priority-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+.priority-row:last-child { border-bottom: none; }
+.priority-row__name { font-size: var(--fs-sm); font-weight: 600; }
+.priority-row__resource { font-size: var(--fs-xs); color: var(--ink-500); }
+.priority-row__resource a { font-size: var(--fs-xs); }
+
+.priority-tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 2px var(--sp-2);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+.priority-tag.must-have { background: var(--status-bad-bg); color: var(--status-bad); }
+.priority-tag.nice-to-have { background: var(--status-neutral-bg); color: var(--ink-700); }
+
+.coverage-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-6);
+}

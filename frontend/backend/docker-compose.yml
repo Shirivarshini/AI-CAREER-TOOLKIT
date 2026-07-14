@@ -1,0 +1,120 @@
+# =============================================================================
+# AI Career Toolkit — Local Development / Integration Stack
+#
+# Brings up all three containers the backend needs: the FastAPI app, a real
+# PostgreSQL database, and a real Redis instance (see README.md's "Docker
+# networking" and "Volumes" sections for how these fit together).
+#
+# Usage:
+#   cp .env.example .env      # first time only
+#   docker compose up --build
+# =============================================================================
+
+services:
+  # ---------------------------------------------------------------------------
+  # Backend API (FastAPI + Uvicorn)
+  # ---------------------------------------------------------------------------
+  api:
+    build: .
+    container_name: career_toolkit_api
+    # --reload gives live code reload for local development. The bind mount
+    # below (.:/app) is what makes edited files actually visible inside the
+    # container for --reload to pick up. Remove --reload for a production-like
+    # run (the Dockerfile's own CMD already omits it).
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    env_file:
+      - .env
+    environment:
+      # These three override whatever's in .env, because inside this Compose
+      # network the DB/Redis hostnames are the *service names* below (Docker's
+      # internal DNS resolves "db" and "redis" to the right containers), not
+      # "localhost" — see the "Docker networking" explanation in README.md.
+      POSTGRES_HOST: db
+      REDIS_ENABLED: "true"
+      REDIS_URL: redis://redis:6379/0
+    ports:
+      - "8000:8000"
+    volumes:
+      # Bind mount: your local source tree, live inside the container — edits
+      # on the host are immediately visible to the running process (enables
+      # --reload). This intentionally shadows the image's /app, EXCEPT the
+      # installed Python packages, which live at /opt/venv (see Dockerfile) —
+      # so mounting over /app never wipes out installed dependencies.
+      - .:/app
+      # Named volume: persists uploaded/temp resume files across container
+      # restarts, independent of the bind-mounted source code.
+      - uploads_data:/app/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - career_toolkit_net
+
+  # ---------------------------------------------------------------------------
+  # PostgreSQL — primary datastore (users, and future ResumeAnalysis /
+  # GitHubAnalysis / SkillGapResult tables per PRD section 11)
+  # ---------------------------------------------------------------------------
+  db:
+    image: postgres:16-alpine
+    container_name: career_toolkit_db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-career_toolkit_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me}
+      POSTGRES_DB: ${POSTGRES_DB:-career_toolkit}
+    ports:
+      # Host:container. Only needed so you can `psql -h localhost` from your
+      # machine for debugging — the `api` container never uses this mapping,
+      # it talks to `db:5432` directly over the internal Docker network.
+      - "5432:5432"
+    volumes:
+      # Named volume: Postgres's on-disk data files. Without this, all data
+      # vanishes the moment the container is removed (`docker compose down`)
+      # — a fresh, empty database would be created on every restart.
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-career_toolkit_user} -d ${POSTGRES_DB:-career_toolkit}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - career_toolkit_net
+
+  # ---------------------------------------------------------------------------
+  # Redis — response cache (GitHub Analysis) and refresh-token revocation
+  # store (Auth). REDIS_ENABLED=true is set on `api` above specifically for
+  # this Compose stack; outside Docker (plain `uvicorn app.main:app --reload`)
+  # it defaults to false and the app falls back to an in-process cache — see
+  # app/core/cache.py.
+  # ---------------------------------------------------------------------------
+  redis:
+    image: redis:7-alpine
+    container_name: career_toolkit_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      # Named volume: persists cached data / revoked-token entries across
+      # container restarts. Not critical (everything here is derivable or
+      # has a TTL), but avoids a cold cache and re-logging-in-everyone on
+      # every `docker compose restart`.
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - career_toolkit_net
+
+volumes:
+  postgres_data:
+  redis_data:
+  uploads_data:
+
+networks:
+  career_toolkit_net:
+    driver: bridge

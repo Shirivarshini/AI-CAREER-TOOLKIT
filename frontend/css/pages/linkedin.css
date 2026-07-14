@@ -1,0 +1,46 @@
+/* ==========================================================================
+   LINKEDIN OPTIMIZER
+   ========================================================================== */
+
+.li-input-mode {
+  display: inline-flex;
+  background: var(--surface-sunken);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  margin-bottom: var(--sp-5);
+}
+.li-input-mode__btn {
+  background: none;
+  border: none;
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink-500);
+}
+.li-input-mode__btn[aria-selected="true"] {
+  background: var(--surface);
+  color: var(--ink-900);
+  box-shadow: var(--shadow-sm);
+}
+
+.li-section-card {
+  padding: var(--sp-4) var(--sp-5);
+  border-left: 3px solid var(--line);
+}
+.li-section-card.status-good { border-left-color: var(--status-good); }
+.li-section-card.status-warn { border-left-color: var(--status-warn); }
+.li-section-card.status-bad { border-left-color: var(--status-bad); }
+
+.li-section-card__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-2); }
+.li-section-card__title { font-weight: 600; font-size: var(--fs-sm); }
+.li-section-card__suggestion { font-size: var(--fs-sm); color: var(--ink-700); margin: 0; }
+
+.pdf-upload-hint {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-xs);
+  color: var(--ink-500);
+  margin-top: var(--sp-3);
+}

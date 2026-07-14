@@ -1,0 +1,157 @@
+{
+  "$comment": "Predefined per-role skill taxonomy for the Skill-Gap Advisor (PRD 5.4 / 6.4). Loaded by app.repositories.skill_taxonomy_repository.JSONSkillTaxonomyRepository. This is intentionally the ONLY place role/skill/resource data lives -- see that module's docstring for the planned PostgreSQL migration path.",
+  "version": 1,
+  "roles": [
+    {
+      "role": "Backend Developer",
+      "aliases": ["backend engineer", "server-side developer", "backend software engineer"],
+      "must_have": [
+        {"skill": "Python", "resource": {"title": "Python Official Tutorial", "url": "https://docs.python.org/3/tutorial/"}},
+        {"skill": "SQL", "resource": {"title": "SQLBolt - Interactive SQL Lessons", "url": "https://sqlbolt.com/"}},
+        {"skill": "REST API Design", "resource": {"title": "REST API Tutorial", "url": "https://restfulapi.net/"}},
+        {"skill": "Git", "resource": {"title": "Pro Git Book", "url": "https://git-scm.com/book/en/v2"}},
+        {"skill": "Docker", "resource": {"title": "Docker Get Started Guide", "url": "https://docs.docker.com/get-started/"}},
+        {"skill": "PostgreSQL", "resource": {"title": "PostgreSQL Tutorial", "url": "https://www.postgresqltutorial.com/"}},
+        {"skill": "Unit Testing", "resource": {"title": "Python unittest docs", "url": "https://docs.python.org/3/library/unittest.html"}}
+      ],
+      "nice_to_have": [
+        {"skill": "FastAPI", "resource": {"title": "FastAPI Documentation", "url": "https://fastapi.tiangolo.com/"}},
+        {"skill": "Redis", "resource": {"title": "Redis Documentation", "url": "https://redis.io/docs/"}},
+        {"skill": "Kubernetes", "resource": {"title": "Kubernetes Basics", "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/"}},
+        {"skill": "AWS", "resource": {"title": "AWS Cloud Practitioner Essentials", "url": "https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/"}},
+        {"skill": "Message Queues", "resource": {"title": "RabbitMQ Tutorials", "url": "https://www.rabbitmq.com/tutorials"}}
+      ]
+    },
+    {
+      "role": "Frontend Developer",
+      "aliases": ["frontend engineer", "ui developer", "front-end developer"],
+      "must_have": [
+        {"skill": "HTML", "resource": {"title": "MDN HTML Guide", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"}},
+        {"skill": "CSS", "resource": {"title": "MDN CSS Guide", "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"}},
+        {"skill": "JavaScript", "resource": {"title": "JavaScript.info", "url": "https://javascript.info/"}},
+        {"skill": "React", "resource": {"title": "React Documentation", "url": "https://react.dev/learn"}},
+        {"skill": "Git", "resource": {"title": "Pro Git Book", "url": "https://git-scm.com/book/en/v2"}},
+        {"skill": "Responsive Design", "resource": {"title": "MDN Responsive Design", "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"}},
+        {"skill": "Accessibility", "resource": {"title": "Web Accessibility Guide", "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"}}
+      ],
+      "nice_to_have": [
+        {"skill": "TypeScript", "resource": {"title": "TypeScript Handbook", "url": "https://www.typescriptlang.org/docs/handbook/intro.html"}},
+        {"skill": "Next.js", "resource": {"title": "Next.js Documentation", "url": "https://nextjs.org/docs"}},
+        {"skill": "Testing Library", "resource": {"title": "Testing Library Docs", "url": "https://testing-library.com/docs/"}},
+        {"skill": "Webpack", "resource": {"title": "Webpack Concepts", "url": "https://webpack.js.org/concepts/"}},
+        {"skill": "GraphQL", "resource": {"title": "GraphQL Official Docs", "url": "https://graphql.org/learn/"}}
+      ]
+    },
+    {
+      "role": "Full Stack Developer",
+      "aliases": ["full-stack developer", "fullstack engineer"],
+      "must_have": [
+        {"skill": "JavaScript", "resource": {"title": "JavaScript.info", "url": "https://javascript.info/"}},
+        {"skill": "React", "resource": {"title": "React Documentation", "url": "https://react.dev/learn"}},
+        {"skill": "Node.js", "resource": {"title": "Node.js Guides", "url": "https://nodejs.org/en/docs/guides"}},
+        {"skill": "SQL", "resource": {"title": "SQLBolt - Interactive SQL Lessons", "url": "https://sqlbolt.com/"}},
+        {"skill": "REST API Design", "resource": {"title": "REST API Tutorial", "url": "https://restfulapi.net/"}},
+        {"skill": "Git", "resource": {"title": "Pro Git Book", "url": "https://git-scm.com/book/en/v2"}},
+        {"skill": "Docker", "resource": {"title": "Docker Get Started Guide", "url": "https://docs.docker.com/get-started/"}}
+      ],
+      "nice_to_have": [
+        {"skill": "TypeScript", "resource": {"title": "TypeScript Handbook", "url": "https://www.typescriptlang.org/docs/handbook/intro.html"}},
+        {"skill": "AWS", "resource": {"title": "AWS Cloud Practitioner Essentials", "url": "https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/"}},
+        {"skill": "CI/CD", "resource": {"title": "GitHub Actions Documentation", "url": "https://docs.github.com/en/actions"}},
+        {"skill": "MongoDB", "resource": {"title": "MongoDB Manual", "url": "https://www.mongodb.com/docs/manual/"}}
+      ]
+    },
+    {
+      "role": "Data Analyst",
+      "aliases": ["data analytics", "business data analyst"],
+      "must_have": [
+        {"skill": "SQL", "resource": {"title": "SQLBolt - Interactive SQL Lessons", "url": "https://sqlbolt.com/"}},
+        {"skill": "Excel", "resource": {"title": "Microsoft Excel Training", "url": "https://support.microsoft.com/en-us/excel"}},
+        {"skill": "Python", "resource": {"title": "Python Official Tutorial", "url": "https://docs.python.org/3/tutorial/"}},
+        {"skill": "Data Visualization", "resource": {"title": "Data Visualization with Python", "url": "https://www.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib"}},
+        {"skill": "Statistics", "resource": {"title": "Khan Academy Statistics", "url": "https://www.khanacademy.org/math/statistics-probability"}},
+        {"skill": "Pandas", "resource": {"title": "Pandas Documentation", "url": "https://pandas.pydata.org/docs/getting_started/index.html"}}
+      ],
+      "nice_to_have": [
+        {"skill": "Tableau", "resource": {"title": "Tableau Learning", "url": "https://www.tableau.com/learn/training"}},
+        {"skill": "Power BI", "resource": {"title": "Power BI Guided Learning", "url": "https://learn.microsoft.com/en-us/power-bi/guided-learning/"}},
+        {"skill": "A/B Testing", "resource": {"title": "A/B Testing Intro (Udacity)", "url": "https://www.udacity.com/course/ab-testing--ud257"}},
+        {"skill": "R", "resource": {"title": "R for Data Science", "url": "https://r4ds.hadley.nz/"}}
+      ]
+    },
+    {
+      "role": "Data Scientist",
+      "aliases": ["data science", "applied data scientist"],
+      "must_have": [
+        {"skill": "Python", "resource": {"title": "Python Official Tutorial", "url": "https://docs.python.org/3/tutorial/"}},
+        {"skill": "SQL", "resource": {"title": "SQLBolt - Interactive SQL Lessons", "url": "https://sqlbolt.com/"}},
+        {"skill": "Statistics", "resource": {"title": "Khan Academy Statistics", "url": "https://www.khanacademy.org/math/statistics-probability"}},
+        {"skill": "Pandas", "resource": {"title": "Pandas Documentation", "url": "https://pandas.pydata.org/docs/getting_started/index.html"}},
+        {"skill": "Machine Learning", "resource": {"title": "Google Machine Learning Crash Course", "url": "https://developers.google.com/machine-learning/crash-course"}},
+        {"skill": "Scikit-learn", "resource": {"title": "Scikit-learn Tutorials", "url": "https://scikit-learn.org/stable/tutorial/index.html"}},
+        {"skill": "Data Visualization", "resource": {"title": "Data Visualization with Python", "url": "https://www.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib"}}
+      ],
+      "nice_to_have": [
+        {"skill": "Deep Learning", "resource": {"title": "Deep Learning Specialization (deeplearning.ai)", "url": "https://www.deeplearning.ai/courses/deep-learning-specialization/"}},
+        {"skill": "TensorFlow", "resource": {"title": "TensorFlow Tutorials", "url": "https://www.tensorflow.org/tutorials"}},
+        {"skill": "PyTorch", "resource": {"title": "PyTorch Tutorials", "url": "https://pytorch.org/tutorials/"}},
+        {"skill": "Spark", "resource": {"title": "Apache Spark Quick Start", "url": "https://spark.apache.org/docs/latest/quick-start.html"}}
+      ]
+    },
+    {
+      "role": "DevOps Engineer",
+      "aliases": ["devops", "site reliability engineer", "sre", "platform engineer"],
+      "must_have": [
+        {"skill": "Linux", "resource": {"title": "Linux Journey", "url": "https://linuxjourney.com/"}},
+        {"skill": "Docker", "resource": {"title": "Docker Get Started Guide", "url": "https://docs.docker.com/get-started/"}},
+        {"skill": "Kubernetes", "resource": {"title": "Kubernetes Basics", "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/"}},
+        {"skill": "CI/CD", "resource": {"title": "GitHub Actions Documentation", "url": "https://docs.github.com/en/actions"}},
+        {"skill": "AWS", "resource": {"title": "AWS Cloud Practitioner Essentials", "url": "https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/"}},
+        {"skill": "Terraform", "resource": {"title": "Terraform Get Started", "url": "https://developer.hashicorp.com/terraform/tutorials"}},
+        {"skill": "Git", "resource": {"title": "Pro Git Book", "url": "https://git-scm.com/book/en/v2"}}
+      ],
+      "nice_to_have": [
+        {"skill": "Ansible", "resource": {"title": "Ansible Getting Started", "url": "https://docs.ansible.com/ansible/latest/getting_started/index.html"}},
+        {"skill": "Monitoring", "resource": {"title": "Prometheus Documentation", "url": "https://prometheus.io/docs/introduction/overview/"}},
+        {"skill": "Bash Scripting", "resource": {"title": "Bash Scripting Guide", "url": "https://tldp.org/LDP/Bash-Beginners-Guide/html/"}},
+        {"skill": "Azure", "resource": {"title": "Microsoft Azure Fundamentals", "url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/"}}
+      ]
+    },
+    {
+      "role": "Mobile App Developer",
+      "aliases": ["mobile developer", "android developer", "ios developer"],
+      "must_have": [
+        {"skill": "Kotlin", "resource": {"title": "Kotlin Documentation", "url": "https://kotlinlang.org/docs/home.html"}},
+        {"skill": "Swift", "resource": {"title": "Swift Documentation", "url": "https://www.swift.org/documentation/"}},
+        {"skill": "Mobile UI Design", "resource": {"title": "Material Design Guidelines", "url": "https://m3.material.io/"}},
+        {"skill": "REST API Design", "resource": {"title": "REST API Tutorial", "url": "https://restfulapi.net/"}},
+        {"skill": "Git", "resource": {"title": "Pro Git Book", "url": "https://git-scm.com/book/en/v2"}},
+        {"skill": "Unit Testing", "resource": {"title": "Android Testing Fundamentals", "url": "https://developer.android.com/training/testing/fundamentals"}}
+      ],
+      "nice_to_have": [
+        {"skill": "Flutter", "resource": {"title": "Flutter Documentation", "url": "https://docs.flutter.dev/"}},
+        {"skill": "React Native", "resource": {"title": "React Native Documentation", "url": "https://reactnative.dev/docs/getting-started"}},
+        {"skill": "Firebase", "resource": {"title": "Firebase Documentation", "url": "https://firebase.google.com/docs"}},
+        {"skill": "CI/CD", "resource": {"title": "GitHub Actions Documentation", "url": "https://docs.github.com/en/actions"}}
+      ]
+    },
+    {
+      "role": "QA Engineer",
+      "aliases": ["quality assurance engineer", "test engineer", "sdet"],
+      "must_have": [
+        {"skill": "Test Case Design", "resource": {"title": "ISTQB Foundation Syllabus", "url": "https://www.istqb.org/certifications/certified-tester-foundation-level"}},
+        {"skill": "Selenium", "resource": {"title": "Selenium Documentation", "url": "https://www.selenium.dev/documentation/"}},
+        {"skill": "API Testing", "resource": {"title": "Postman Learning Center", "url": "https://learning.postman.com/"}},
+        {"skill": "SQL", "resource": {"title": "SQLBolt - Interactive SQL Lessons", "url": "https://sqlbolt.com/"}},
+        {"skill": "Git", "resource": {"title": "Pro Git Book", "url": "https://git-scm.com/book/en/v2"}},
+        {"skill": "Bug Tracking", "resource": {"title": "Atlassian Jira Guides", "url": "https://www.atlassian.com/software/jira/guides"}}
+      ],
+      "nice_to_have": [
+        {"skill": "Python", "resource": {"title": "Python Official Tutorial", "url": "https://docs.python.org/3/tutorial/"}},
+        {"skill": "CI/CD", "resource": {"title": "GitHub Actions Documentation", "url": "https://docs.github.com/en/actions"}},
+        {"skill": "Performance Testing", "resource": {"title": "Apache JMeter User Manual", "url": "https://jmeter.apache.org/usermanual/index.html"}},
+        {"skill": "Docker", "resource": {"title": "Docker Get Started Guide", "url": "https://docs.docker.com/get-started/"}}
+      ]
+    }
+  ]
+}

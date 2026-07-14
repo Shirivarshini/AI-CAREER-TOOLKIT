@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Career Toolkit — Land more interviews</title>
+<meta name="description" content="Score your resume against ATS rules, audit your GitHub and LinkedIn profiles, and close your skill gaps before you apply." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages/landing.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-nav">
+  <div class="container site-nav__inner">
+    <a href="index.html" class="app-sidebar__brand" style="margin:0;" aria-label="AI Career Toolkit home">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="9" height="9" rx="2" stroke="#3448FF" stroke-width="1.8"/><rect x="13" y="2" width="9" height="9" rx="2" stroke="#3448FF" stroke-width="1.8" opacity="0.55"/><rect x="2" y="13" width="9" height="9" rx="2" stroke="#3448FF" stroke-width="1.8" opacity="0.55"/><rect x="13" y="13" width="9" height="9" rx="2" stroke="#3448FF" stroke-width="1.8" opacity="0.3"/></svg>
+      Career Toolkit
+    </a>
+    <nav class="site-nav__links" data-nav-links aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+    <div class="site-nav__actions">
+      <button class="btn btn-icon btn-ghost" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1.5v1.8M9 14.7v1.8M3.5 9H1.5M16.5 9h-2M4.4 4.4 3.1 3.1M14.9 14.9l-1.3-1.3M4.4 13.6l-1.3 1.3M14.9 3.1l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="9" r="3.5" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+      <a href="login.html" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="signup.html" class="btn btn-primary btn-sm">Get started</a>
+    </div>
+    <button class="btn btn-icon btn-secondary site-nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero container">
+    <div class="hero__grid">
+      <div>
+        <span class="hero__eyebrow">Free while you're job hunting</span>
+        <h1>Know exactly why you're not getting callbacks.</h1>
+        <p class="hero__sub">
+          The AI Career Toolkit scores your resume against real ATS parsing rules,
+          audits your GitHub and LinkedIn presence, and shows you the precise
+          skills standing between you and your next role.
+        </p>
+        <div class="hero__actions">
+          <a href="resume-analyzer.html" class="btn btn-primary btn-lg">Analyze my resume, free</a>
+          <a href="#how-it-works" class="btn btn-secondary btn-lg">See how it works</a>
+        </div>
+        <div class="hero__proof">
+          <span><strong>4</strong>tools in one pass</span>
+          <span><strong>&lt;5s</strong>resume scoring time</span>
+          <span><strong>No signup</strong>required to start</span>
+        </div>
+      </div>
+
+      <div class="hero__panel" aria-hidden="true">
+        <div class="hero__panel-head">
+          <span>LIVE READOUT</span>
+          <span class="hero__panel-dots"><span></span><span></span><span></span></span>
+        </div>
+        <div class="hero__panel-row">
+          <span class="hero__panel-row-label">ATS resume score</span>
+          <span class="hero__panel-row-score good">82 / 100</span>
+        </div>
+        <div class="hero__panel-row">
+          <span class="hero__panel-row-label">GitHub profile strength</span>
+          <span class="hero__panel-row-score warn">61 / 100</span>
+        </div>
+        <div class="hero__panel-row">
+          <span class="hero__panel-row-label">LinkedIn optimization</span>
+          <span class="hero__panel-row-score good">76 / 100</span>
+        </div>
+        <div class="hero__panel-row">
+          <span class="hero__panel-row-label">Skill coverage — Backend Dev</span>
+          <span class="hero__panel-row-score warn">58%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="features">
+    <div class="section-head">
+      <span class="section-head__eyebrow">Core tools</span>
+      <h2>Everything you need before you hit apply</h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="card card-hover feature-card">
+        <div class="feature-card__icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M6 2.5h7l4 4V19a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 11h6M8 14.5h6M8 7.5h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Resume ATS Scoring</h3>
+        <p>Upload a PDF or DOCX and get a 0–100 score with a category breakdown and fix list.</p>
+        <a href="resume-analyzer.html" class="feature-card__link">Analyze a resume &rarr;</a>
+      </div>
+      <div class="card card-hover feature-card">
+        <div class="feature-card__icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M8 17c-4 1.2-4-1.9-5.5-2.3M15 19.5V16c0-1 .3-1.6.9-2.1-3 -0.3-6.1-1.5-6.1-6.4 0-1.4.5-2.6 1.3-3.5-.1-.3-.6-1.7.1-3.5 0 0 1.1-.4 3.6 1.3a12.3 12.3 0 0 1 6.6 0c2.5-1.7 3.6-1.3 3.6-1.3.7 1.8.2 3.2.1 3.5.8.9 1.3 2.1 1.3 3.5 0 4.9-3.1 6.1-6.1 6.4.5.4.9 1.2.9 2.5v3.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>GitHub Profile Analysis</h3>
+        <p>See how recruiters read your repos: activity, README quality, and pinned-project relevance.</p>
+        <a href="github-analysis.html" class="feature-card__link">Check my GitHub &rarr;</a>
+      </div>
+      <div class="card card-hover feature-card">
+        <div class="feature-card__icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="7" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 18.5c0-3.3 3-5.5 6.5-5.5s6.5 2.2 6.5 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>LinkedIn Optimizer</h3>
+        <p>Paste your profile sections or upload your PDF export for section-by-section rewrite tips.</p>
+        <a href="linkedin-optimizer.html" class="feature-card__link">Optimize my profile &rarr;</a>
+      </div>
+      <div class="card card-hover feature-card">
+        <div class="feature-card__icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8.5" stroke="currentColor" stroke-width="1.6"/><circle cx="11" cy="11" r="4.5" stroke="currentColor" stroke-width="1.6"/><circle cx="11" cy="11" r="1" fill="currentColor"/></svg></div>
+        <h3>Skill-Gap Analysis</h3>
+        <p>Pick a target role and see exactly which must-have skills you're missing, with resources.</p>
+        <a href="skill-gap.html" class="feature-card__link">Find my gaps &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="how-it-works">
+    <div class="section-head">
+      <span class="section-head__eyebrow">Process</span>
+      <h2>How it works</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step__index">01</span>
+        <div>
+          <h4>Bring what you have</h4>
+          <p>Drop in your resume, GitHub username, or LinkedIn export — no perfect starting point required.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step__index">02</span>
+        <div>
+          <h4>Get a scored breakdown</h4>
+          <p>Each tool returns an overall score plus a category-by-category readout of what's working.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step__index">03</span>
+        <div>
+          <h4>Fix what's flagged</h4>
+          <p>Work through a prioritized, plain-language fix list — then re-run to confirm your score moved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="cta-band">
+      <h2>Your next interview starts with a score.</h2>
+      <p>Start with the resume analyzer — no account needed. Sign up later to save your history and track progress over time.</p>
+      <a href="resume-analyzer.html" class="btn btn-primary btn-lg">Start free analysis</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div class="site-footer__col">
+        <div class="app-sidebar__brand" style="margin-bottom: var(--sp-3);">Career Toolkit</div>
+        <p>An AI-assisted toolkit that helps job seekers pass ATS filters and present themselves well online.</p>
+      </div>
+      <div class="site-footer__col">
+        <h5>Tools</h5>
+        <a href="resume-analyzer.html">Resume Analyzer</a>
+        <a href="github-analysis.html">GitHub Analysis</a>
+        <a href="linkedin-optimizer.html">LinkedIn Optimizer</a>
+        <a href="skill-gap.html">Skill-Gap Analysis</a>
+      </div>
+      <div class="site-footer__col">
+        <h5>Account</h5>
+        <a href="login.html">Log in</a>
+        <a href="signup.html">Sign up</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <div class="site-footer__col">
+        <h5>Legal</h5>
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of service</a>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>&copy; 2026 AI Career Toolkit. All rights reserved.</span>
+      <span>Built for students, career-switchers, and placement cells.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/utils/dom.js"></script>
+<script src="js/utils/storage.js"></script>
+<script src="js/utils/theme.js"></script>
+<script src="js/utils/toast.js"></script>
+<script src="js/utils/api.js"></script>
+<script src="js/components/navbar.js"></script>
+<script src="js/components/modal.js"></script>
+<script src="js/pages/landing.js"></script>
+</body>
+</html>
